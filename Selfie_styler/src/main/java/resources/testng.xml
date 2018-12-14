@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Testng Automation Suite">
+
+	<test name="Regression suite 1">
+
+		<classes>
+
+			<class name="Deployment.Testcases.WomenTest" />
+
+			<class name="Deployment.Testcases.MenTest" />
+
+			<class name="Deployment.Testcases.SignUpErrorHandling" />
+
+			<class name="Deployment.Testcases.Verify_Login" />
+
+			<class name="Deployment.Testcases.Verify_Forgot_Password" />
+
+			<class name="Deployment.Testcases.Signin_Errorhandling" />
+
+			<class name="Deployment.Testcases.Verify_Contactus" />
+
+			<class name="Deployment.Testcases.Contactus_Errorhandling" />
+
+			<class name="Deployment.Testcases.Verify_Cancelsignup" />
+
+			<class name="Deployment.Testcases.Verify_Shop_Checkout" />
+
+			<class name="Deployment.Testcases.Verify_Fitting_Room_Popup" />
+
+			<class name="Deployment.Testcases.Verify_Fitting_Room_Hanger" />
+
+			<class name="Deployment.Testcases.Verify_Fitting_Room_Edit_Look" />
+
+			<class name="Deployment.Testcases.Verify_Fitting_Room_Buy_Look" />
+
+			<class name="Deployment.Testcases.Verify_FittingRoom_ProductDetail" />
+
+			<class name="Deployment.Testcases.Verify_favourite" />
+
+			<class name="Deployment.Testcases.Favorite_FittingRoom" />
+
+			<class name="Deployment.Testcases.Verify_Badge_Number" />
+
+			<class name="Deployment.Testcases.Verify_Fitting_Room_SearchPage" />
+
+
+		</classes>
+
+
+
+	</test>
+
+</suite>
+ 
