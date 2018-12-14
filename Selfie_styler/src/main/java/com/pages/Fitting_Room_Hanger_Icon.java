@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestResult;
 
 import Utility.Synchronization;
+import Utility.screenshot;
 
 
 public class Fitting_Room_Hanger_Icon {
@@ -84,5 +86,7 @@ public class Fitting_Room_Hanger_Icon {
 	}
 	
 	
+
+
 	
 }

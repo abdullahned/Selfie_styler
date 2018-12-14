@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 
 public class screenshot {
 	
-	
+	public static WebDriver driver;
 	
 	public static void capturescreenshot (WebDriver driver, String screenshotname)
 	
@@ -35,6 +35,17 @@ public class screenshot {
 		
 		}
 	
+	public static void teardown(ITestResult result) 
+	  {
+		  
+		  if(ITestResult.FAILURE ==result.getStatus())
+			  
+		  {
+			  screenshot.capturescreenshot(driver, result.getName());
+		  }
+		  
+		  
+	  }
 	
 
 	
