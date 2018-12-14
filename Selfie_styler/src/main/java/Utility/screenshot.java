@@ -21,7 +21,7 @@ public class screenshot {
 		try {
 			TakesScreenshot ts= (TakesScreenshot)driver;
 			 File source =ts.getScreenshotAs(OutputType.FILE);
-			 FileUtils.copyFile(source, new File("C:\\Users\\m.abdullah\\git\\SelfieStyler\\SelfieStyler\\Screenshots\\"+screenshotname+".png"));
+			 FileUtils.copyFile(source, new File("C:\\Users\\m.abdullah\\git\\Selfie_styler_updated\\Selfie_styler\\Failed-testcase-screenshots\\"+screenshotname+".png"));
 
 		}
            catch (Exception e) {
