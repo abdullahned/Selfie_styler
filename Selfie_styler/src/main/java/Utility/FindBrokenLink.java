@@ -10,19 +10,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.pages.Login;
+
 import Utility.GetReponseCode;
 
 public class FindBrokenLink {
 	
 	
 	WebDriver driver;
-
+	
 	// It will open the browser & Application before Test
 	@BeforeTest
-	public void openBrowser() {
+	public void openBrowser() throws Exception {
 		
 		
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\m.abdullah\\Downloads\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\m.abdullah\\Downloads\\chromedriver.exe");
 		  
 		driver = new ChromeDriver();
 		
@@ -30,6 +33,7 @@ public class FindBrokenLink {
 		driver.manage().window().maximize();
 		//To Open the Application
 		driver.get("http://www.selfiestyler.com");
+	    
 	}
 	
 	@AfterTest
