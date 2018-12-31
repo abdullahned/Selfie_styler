@@ -1,25 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>Selfie_styler</groupId>
-  <artifactId>Selfie_styler</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>Selfie_styler</groupId>
+	<artifactId>Selfie_styler</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>Selfie_styler</name>
-  <url>http://maven.apache.org</url>
+	<name>Selfie_styler</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-  
-  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>   
-    
-  </properties>
-  
-  
-  <build>
+		<maven.compiler.target>1.6</maven.compiler.target>
+
+	</properties>
+
+
+	<build>
 		<!-- To define the plugin version in your parent POM -->
 
 		<plugins>
@@ -71,14 +72,14 @@
 
 
 	</build>
-  
-  
 
 
-  <dependencies>
-  
-  
-   
+
+
+	<dependencies>
+
+
+
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -108,6 +109,13 @@
 		</dependency>
 
 
-    
-  </dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+
+	</dependencies>
 </project>

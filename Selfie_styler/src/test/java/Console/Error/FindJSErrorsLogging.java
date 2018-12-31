@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,17 +14,25 @@ import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.pages.Home;
 import com.pages.Login;
+
+import Send.Email.selenium.Send_Email_Script;
+
 
 public class FindJSErrorsLogging {
 
 	public WebDriver driver;
 	
 	Login Login_obj;
+	
+	Home Home_obj;
+	
 	
 	@BeforeMethod
 	public void setup()
@@ -35,16 +44,26 @@ public class FindJSErrorsLogging {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\m.abdullah\\Downloads\\chromedriver.exe");
 		
-		driver = new ChromeDriver(capabilities); // launch chrome	
+		driver = new ChromeDriver(capabilities); // launch chrome
+
+		driver.manage().window().maximize(); //maximize window
+			
+		driver.manage().deleteAllCookies(); //delete all the cookies
+		
 		
 	    //driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 	}
 	
 	
 	@AfterMethod
-	public void tearDown()
+	public void tearDown(ITestResult result) throws EmailException
 	{
-		//driver.quit();
+		if(ITestResult.SUCCESS ==result.getStatus())	  
+		{
+			Send_Email_Script.SendEmail();		
+		  }
+		
+		driver.quit();
 		
 	}
 	
@@ -55,9 +74,10 @@ public class FindJSErrorsLogging {
 	  {
 		  System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n");
 		  
-	  }		
-		
+	  }		 
+	  
 	}
+	
 	
 	
 	  @Test
@@ -73,9 +93,11 @@ public class FindJSErrorsLogging {
 	      
 	      Thread.sleep(1000);
 	      
-	      System.out.println("*************SelfieStyler: Login - SelfieStyler******************\n");
+	      Login_obj = new Login(driver);
 	      
-	      Login_obj = new Login(driver);  // create the object of login class 
+	      Home_obj = new Home(driver);
+	         
+	      System.out.println("*************SelfieStyler: Login - SelfieStyler******************\n");
 	
 	      Login_obj.login_selfie_styler("qa-women@mailinator.com", "Germany0!");   
 
@@ -85,7 +107,7 @@ public class FindJSErrorsLogging {
 	        
 	       Thread.sleep(3000);
 	       
-	        driver.findElement(By.linkText("Brands")).click();
+	        Home_obj.Click_Brands();
 	        
 	        System.out.println("*************Brands Page******************\n");
 	        
@@ -93,13 +115,15 @@ public class FindJSErrorsLogging {
 	        
 	        extractJSLogsInfo();
 	        
-            driver.findElement(By.linkText("My Account")).click();
+	        Home_obj.Click_MyAccount();
 	        
 	        System.out.println("*************My Account Page******************\n");
 	        
+	        Thread.sleep(3000);
+	        
 	        extractJSLogsInfo();
 	        
-           driver.findElement(By.linkText("Our Self")).click();
+	        Home_obj.Click_OurSelf();
 	        
 	        System.out.println("*************Our Self Page******************\n");
 	        
@@ -110,9 +134,6 @@ public class FindJSErrorsLogging {
 	        
 	    }
 	
-	
-	
-	
-	
+
 	
 }
