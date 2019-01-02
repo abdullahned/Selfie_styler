@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96890" started-at="2018-12-31T14:13:55Z" finished-at="2018-12-31T14:15:31Z">
+  <suite name="Default suite" duration-ms="96706" started-at="2019-01-02T16:39:15Z" finished-at="2019-01-02T16:40:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="96890" started-at="2018-12-31T14:13:55Z" finished-at="2018-12-31T14:15:31Z">
+    <test name="Default test" duration-ms="96706" started-at="2019-01-02T16:39:15Z" finished-at="2019-01-02T16:40:51Z">
       <class name="Console.Error.FindJSErrorsLogging">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.FindJSErrorsLogging@4883b407]" name="setup" is-config="true" duration-ms="4435" started-at="2018-12-31T14:13:55Z" finished-at="2018-12-31T14:13:59Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.FindJSErrorsLogging@42e26948]" name="setup" is-config="true" duration-ms="3979" started-at="2019-01-02T16:39:15Z" finished-at="2019-01-02T16:39:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testMethod()[pri:0, instance:Console.Error.FindJSErrorsLogging@4883b407]" name="testMethod" duration-ms="85329" started-at="2018-12-31T14:13:59Z" finished-at="2018-12-31T14:15:24Z">
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:Console.Error.FindJSErrorsLogging@42e26948]" name="testMethod" duration-ms="91994" started-at="2019-01-02T16:39:19Z" finished-at="2019-01-02T16:40:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethod -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.FindJSErrorsLogging@4883b407]" name="tearDown" is-config="true" duration-ms="7098" started-at="2018-12-31T14:15:24Z" finished-at="2018-12-31T14:15:31Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.FindJSErrorsLogging@42e26948]" name="tearDown" is-config="true" duration-ms="706" started-at="2019-01-02T16:40:51Z" finished-at="2019-01-02T16:40:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testMethod status=SUCCESS method=FindJSErrorsLogging.testMethod()[pri:0, instance:Console.Error.FindJSErrorsLogging@4883b407] output={null}]]]>
+                <![CDATA[[TestResult name=testMethod status=SUCCESS method=FindJSErrorsLogging.testMethod()[pri:0, instance:Console.Error.FindJSErrorsLogging@42e26948] output={null}]]]>
               </value>
             </param>
           </params>

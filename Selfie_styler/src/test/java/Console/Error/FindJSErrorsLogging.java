@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
+import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.SimpleEmail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,19 +62,49 @@ public class FindJSErrorsLogging {
 	{
 		if(ITestResult.SUCCESS ==result.getStatus())	  
 		{
-			Send_Email_Script.SendEmail();		
+			//Send_Email_Script.SendEmail();		
 		  }
 		
 		driver.quit();
 		
 	}
 	
-	public void extractJSLogsInfo()
+	public void extractJSLogsInfo() throws EmailException
 	{
 	  LogEntries logEntries =driver.manage().logs().get(LogType.BROWSER);
 	  for (LogEntry entry : logEntries)
 	  {
-		  System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n");
+		  
+		  
+		 // System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n");
+		  
+		 String Error_Message = new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n";
+		 
+		  if(Error_Message.contains("SEVERE"))
+		  {
+			  System.out.println(Error_Message+"\n");
+			  
+			  System.out.println("Server Started");
+				
+				Email email = new SimpleEmail();
+				
+				email.setHostName("smtp.office365.com");
+				email.setSmtpPort(587);
+
+				email.setAuthentication("m.abdullah@selfiestyler.com", "Karachi0!");
+				
+				email.setSSLOnConnect(false);      
+				email.setTLS(true);
+				email.setFrom("m.abdullah@selfiestyler.com");
+				email.setSubject("SEVERE Console Error");
+				email.setMsg(Error_Message);
+				email.addTo("m.abdullah@selfiestyler.com");
+				email.send(); 
+				
+				
+				System.out.println("Email Sent");
+			  
+		  }
 		  
 	  }		 
 	  
