@@ -16,7 +16,7 @@ public class Verify_Forgot_Password {
 	public void validate_forgot_password() throws Exception
 	{
 	// This will launch browser and specific url 
-	   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+	   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 	   
 	   Forgot_Password_obj = new Forgot_Password(driver); // create the object of forgot password class
 	   

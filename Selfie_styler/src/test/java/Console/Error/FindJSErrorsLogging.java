@@ -24,7 +24,6 @@ import org.testng.annotations.Test;
 import com.pages.Home;
 import com.pages.Login;
 
-import Send.Email.selenium.Send_Email_Script;
 
 
 public class FindJSErrorsLogging {
@@ -84,26 +83,7 @@ public class FindJSErrorsLogging {
 		  {
 			  System.out.println(Error_Message+"\n");
 			  
-			  System.out.println("Server Started");
-				
-				Email email = new SimpleEmail();
-				
-				email.setHostName("smtp.office365.com");
-				email.setSmtpPort(587);
-
-				email.setAuthentication("m.abdullah@selfiestyler.com", "Karachi0!");
-				
-				email.setSSLOnConnect(false);      
-				email.setTLS(true);
-				email.setFrom("m.abdullah@selfiestyler.com");
-				email.setSubject("SEVERE Console Error");
-				email.setMsg(Error_Message);
-				email.addTo("m.abdullah@selfiestyler.com");
-				email.send(); 
-				
-				
-				System.out.println("Email Sent");
-			  
+		
 		  }
 		  
 	  }		 

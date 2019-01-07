@@ -50,8 +50,6 @@ Random r = new Random();
 		womenobj = new Women(driver);  // create the object of women class
 		
 		womenobj.Signup_Click(); // click the sign up link
-		
-		// womenobj.select_gender(); // select the gender
 		 
 		 womenobj.Enter_Firstname(firstname);  // enter the first name
 		   
@@ -162,28 +160,14 @@ Random r = new Random();
 	  Assert.assertTrue(error_confirm_mem_password.contains("Passwords entered do not match."));
 		
 	  Assert.assertTrue(error_all_fields.contains("Please fill out all required fields"));
-	  
-	// Assert.assertTrue(error_all_fields.contains("Pakistan")); 
 	 
 	 
 	  
-	//  driver.quit();
+	 driver.quit();
 	  
   
    }
 	
 
-
-	/* @AfterTest
-	 public void tear()
-	 {
-		 
-		extent.flush();
-		 
-		 
-		 
-	 }  */
-	 
-	
 	
 }

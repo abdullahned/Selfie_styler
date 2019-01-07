@@ -2,6 +2,12 @@
 
 <suite name="Testng Automation Suite">
 
+	<listeners>
+
+		<listener class-name="Utility.ExtentReporterNG" />
+
+	</listeners>
+
 	<test name="Regression suite 1">
 
 		<classes>
@@ -13,7 +19,7 @@
 			<class name="Deployment.Testcases.SignUpErrorHandling" />
 
 			<class name="Deployment.Testcases.Verify_Login" />
-
+			
 			<class name="Deployment.Testcases.Verify_Forgot_Password" />
 
 			<class name="Deployment.Testcases.Signin_Errorhandling" />
@@ -43,6 +49,7 @@
 			<class name="Deployment.Testcases.Verify_Badge_Number" />
 
 			<class name="Deployment.Testcases.Verify_Fitting_Room_SearchPage" />
+
 
 
 		</classes>

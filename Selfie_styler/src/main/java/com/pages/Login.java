@@ -50,7 +50,7 @@ public class Login {
 	public void login_selfie_styler(String uid,String pass) throws Exception
 	{
 	
-	 Synchronization.Exception_Handling(driver, clickLogin,30);
+	// Synchronization.Exception_Handling(driver, clickLogin,30);
 	  
 	  Synchronization.sendKeys(driver, enterEmail, 30, uid);
 	  

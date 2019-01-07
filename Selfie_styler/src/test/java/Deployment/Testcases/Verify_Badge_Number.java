@@ -22,7 +22,7 @@ public class Verify_Badge_Number {
 	public void validate_Badge_number() throws Exception
 	{
 		// This will launch browser and specific url 
-		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		   
 		   Login_obj = new Login(driver); // create the object of login class
 		   

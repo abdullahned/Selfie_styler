@@ -18,7 +18,7 @@ public class Signin_Errorhandling {
 	public void Invalidcrdentials() throws Exception
 	{
 		//This will launch browser and specific url 
-		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		
 		loginobj = new Login(driver);
 		
@@ -56,7 +56,7 @@ public class Signin_Errorhandling {
 	{
 		
 		//This will launch browser and specific url 
-		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		
 		loginobj = new Login(driver); // create object of login class
 		
@@ -95,7 +95,7 @@ public class Signin_Errorhandling {
 	public void EmailNotFound() throws Exception
 	{
 		//This will launch browser and specific url 
-		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		
 		loginobj = new Login(driver); // create object of login class
 		
@@ -136,7 +136,7 @@ public class Signin_Errorhandling {
 	{
 		
 		//This will launch browser and specific url 
-		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		   
 		   Forgot_Password_obj = new Forgot_Password(driver); // create the object of forgot password class
 		   
@@ -196,7 +196,7 @@ public class Signin_Errorhandling {
 	public void PasswordNotMatched() throws Exception
 	{
 		//This will launch browser and specific url 
-		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+		   WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
 		   
 		   Forgot_Password_obj = new Forgot_Password(driver); // create the object of forgot password class
 		   

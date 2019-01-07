@@ -29,7 +29,7 @@ public class Verify_Fitting_Room_Buy_Look {
 	public void validate_fitting_room_buylook () throws Exception
 	{	
     	// This will launch browser and specific url 
-       WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login_deactivate/");  // live Environment
+       WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
     			
        Login_obj = new Login(driver);  // create the object of login class 
     			
@@ -73,8 +73,6 @@ public class Verify_Fitting_Room_Buy_Look {
 	   
 	   Assert.assertTrue(cart_count.contains("0")); // verify empty cart count
 	   
-	 //  fitting_editlook_obj.recommended_size0();   // select size from the drop down
-	   
 	   Thread.sleep(4000);
 	   
 	   fitting_editlook_obj.Click_Add_to_bag_0();   // add the item to the bag
@@ -90,8 +88,6 @@ public class Verify_Fitting_Room_Buy_Look {
 	   Thread.sleep(3000);
 	   
 	   fitting_editlook_obj.Click_Add_to_bag_0();   // add the item to the bag
-	   
-	  // fitting_editlook_obj.recommended_size1();
 	   
 	   Thread.sleep(6000);
 	   
