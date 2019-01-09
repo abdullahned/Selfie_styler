@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -28,9 +29,17 @@ public class FreeCRMTest {
 
 	
 
-	public WebDriver driver;
-	public ExtentReports extent;
-	public ExtentTest extentTest;
+	public static WebDriver driver;
+	public static ExtentReports extent;
+	public static ExtentTest extentTest;
+	
+	Random r = new Random();
+	
+	  public String firstname = "QA"+r.nextInt(100);
+	  public String lastname = "test"+r.nextInt(1000);
+	  public String email = "Qtest"+r.nextInt(1000)+"@mailinator.com";
+	  public String email1 = "Qtest"+r.nextInt(1000)+"@mailinator.com";
+	  
 
 	
 	
@@ -71,30 +80,12 @@ public class FreeCRMTest {
 		driver = new ChromeDriver(); 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get("https://www.freecrm.com/");
+		driver.get("https://www.selfiestyler.com/");
 		
 	}
-	
-	
-	
-	@Test
-	public void freeCrmTitleTest(){
-		extentTest = extent.startTest("freeCrmTitleTest");
-		String title = driver.getTitle();
-		System.out.println(title);
-		Assert.assertEquals(title,"#1 Free CRM for Any Business: Online Customer Relationship Software123");
-	}
-	
-	@Test
-	public void freemCRMLogoTest(){
-		extentTest = extent.startTest("freemCRMLogoTest");
-		boolean b = driver.findElement(By.xpath("//img[@class='img-responsive111']")).isDisplayed();
-		Assert.assertTrue(b);
-	}
-	
 	
 	
 	

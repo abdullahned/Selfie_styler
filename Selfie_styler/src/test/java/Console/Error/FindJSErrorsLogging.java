@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
+import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
@@ -83,6 +84,29 @@ public class FindJSErrorsLogging {
 		  {
 			  System.out.println(Error_Message+"\n");
 			  
+		/*	  System.out.println("=========Test Started=============");
+			  
+			   Email email = new SimpleEmail();
+				
+				email.setHostName("smtp.gmail.com");
+				
+				email.setSmtpPort(465);
+				
+				email.setAuthenticator(new DefaultAuthenticator("qa.auto.sstyler@gmail.com","Karachi0!"));	
+				
+				email.setSSLOnConnect(true);
+				
+				email.setFrom("qa.auto.sstyler@gmail.com");
+				
+				email.setSubject("Execution Result of Testcases");
+				
+				email.setMsg(Error_Message);
+				
+				email.addTo("abdullahsheikh90@yahoo.com");
+				
+				email.send(); 
+				
+				System.out.println("=========Email Sent============="); */
 		
 		  }
 		  
