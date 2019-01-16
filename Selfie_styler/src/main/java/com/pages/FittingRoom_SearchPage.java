@@ -50,7 +50,7 @@ public class FittingRoom_SearchPage {
 				
 		executor.executeScript("arguments[0].click();", search);	
 		
-		executor.executeScript("arguments[1].value = arguments[0]; ", "Lush Clothing", search); 
+		executor.executeScript("arguments[1].value = arguments[0]; ", "Acrobat", search); 
 		
 	
 	}

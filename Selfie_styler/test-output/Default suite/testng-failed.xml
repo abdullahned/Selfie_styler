@@ -3,16 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testcases.FreeCRMTest">
+      <class name="Console.Error.FindJSErrorsLogging">
         <methods>
-          <include name="tearDown"/>
-          <include name="endReport"/>
-          <include name="freeCrmTitleTest"/>
-          <include name="setExtent"/>
-          <include name="freemCRMLogoTest"/>
+          <include name="testMethod"/>
           <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Testcases.FreeCRMTest -->
+      </class> <!-- Console.Error.FindJSErrorsLogging -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

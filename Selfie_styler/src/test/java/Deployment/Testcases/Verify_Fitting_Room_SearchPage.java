@@ -24,8 +24,9 @@ public class Verify_Fitting_Room_SearchPage {
 	public void validate_fitting_searchpage() throws Exception
 	{
 		
-	   // This will launch browser and specific url 
-	  WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
+	   // This will launch browser and specific url
+	  
+      WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");
 		    			
 	  Login_obj = new Login(driver);  // create the object of login class 
 		   	
@@ -56,7 +57,7 @@ public class Verify_Fitting_Room_SearchPage {
       
       Thread.sleep(5000);
       
-   //  Assert.assertTrue(search_text.contains("YOUR SEARCH FOR \"LUSH CLOTHING\" REVEALED THE FOLLOWING:")); // verify the search text
+   //  Assert.assertTrue(search_text.contains("Your search for \"Acrobat\" revealed the following:")); // verify the search text
       
       driver.quit();  	
 		

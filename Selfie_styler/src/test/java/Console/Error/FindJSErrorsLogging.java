@@ -1,5 +1,6 @@
 package Console.Error;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -35,7 +36,10 @@ public class FindJSErrorsLogging {
 	
 	Home Home_obj;
 	
+	ArrayList arr = new ArrayList();
 	
+	String test= "";
+	 
 	@BeforeMethod
 	public void setup()
 	{
@@ -75,42 +79,51 @@ public class FindJSErrorsLogging {
 	  for (LogEntry entry : logEntries)
 	  {
 		  
-		  
-		 // System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n");
-		  
-		 String Error_Message = new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage()+"\n";
+		 String Error_Message = new Date(entry.getTimestamp()) + "\n" +"\n" + entry.getLevel() + "\n" + "\n" + entry.getMessage()+"\n";
 		 
 		  if(Error_Message.contains("SEVERE"))
 		  {
-			  System.out.println(Error_Message+"\n");
+		    // System.out.println(Error_Message+"\n");
 			  
-		/*	  System.out.println("=========Test Started=============");
-			  
-			   Email email = new SimpleEmail();
-				
-				email.setHostName("smtp.gmail.com");
-				
-				email.setSmtpPort(465);
-				
-				email.setAuthenticator(new DefaultAuthenticator("qa.auto.sstyler@gmail.com","Karachi0!"));	
-				
-				email.setSSLOnConnect(true);
-				
-				email.setFrom("qa.auto.sstyler@gmail.com");
-				
-				email.setSubject("Execution Result of Testcases");
-				
-				email.setMsg(Error_Message);
-				
-				email.addTo("abdullahsheikh90@yahoo.com");
-				
-				email.send(); 
-				
-				System.out.println("=========Email Sent============="); */
-		
+			 arr.add(Error_Message); 
+		     
 		  }
+		
+	  }		
+	  
+	 for (int i =0; i<arr.size();i++)
+	  {
+		 test += arr.get(i) +"\n";
+		 
+		 // System.out.println(arr.get(i));
 		  
-	  }		 
+	  }
+	 
+	 System.out.println(test);
+	 
+	   System.out.println("=========Test Started=============");
+	  
+	   Email email = new SimpleEmail();
+		
+		email.setHostName("smtp.gmail.com");
+		
+		email.setSmtpPort(465);
+		
+		email.setAuthenticator(new DefaultAuthenticator("qa.auto.sstyler@gmail.com","Karachi0!"));	
+		
+		email.setSSLOnConnect(true);
+		
+		email.setFrom("qa.auto.sstyler@gmail.com");
+		
+		email.setSubject("Login scenario Console Error");
+
+		email.setMsg(test);
+		
+		email.addTo("webfeedback@selfiestyler.com");
+		
+		email.send(); 
+	
+		System.out.println("=========Email Sent============="); 
 	  
 	}
 	
@@ -125,7 +138,7 @@ public class FindJSErrorsLogging {
 	      
 	      Thread.sleep(2000);
 	      
-	      extractJSLogsInfo();
+	  //    extractJSLogsInfo();
 	      
 	      Thread.sleep(1000);
 	      
@@ -143,7 +156,7 @@ public class FindJSErrorsLogging {
 	        
 	       Thread.sleep(3000);
 	       
-	        Home_obj.Click_Brands();
+	    /*    Home_obj.Click_Brands();
 	        
 	        System.out.println("*************Brands Page******************\n");
 	        
@@ -167,7 +180,7 @@ public class FindJSErrorsLogging {
 	        
 	        extractJSLogsInfo();
 	        
-	        
+	        */
 	    }
 	
 
