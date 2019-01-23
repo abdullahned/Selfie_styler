@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Console.Error.FindJSErrorsLogging">
+      <class name="Console.Error.Signup_women_console">
         <methods>
-          <include name="testMethod"/>
-          <include name="setup"/>
+          <include name="signup_women_console_error"/>
+          <include name="endReport"/>
           <include name="tearDown"/>
+          <include name="setExtent"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Console.Error.FindJSErrorsLogging -->
+      </class> <!-- Console.Error.Signup_women_console -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

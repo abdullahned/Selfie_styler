@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Error]">
+  <test thread-count="5" name="Console Error(failed)">
+    <classes>
+      <class name="Console.Error.Signup_women_console">
+        <methods>
+          <include name="signup_women_console_error"/>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="setExtent"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Console.Error.Signup_women_console -->
+      <class name="Console.Error.Login_Console">
+        <methods>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="setExtent"/>
+          <include name="setup"/>
+          <include name="Login_Console_Error"/>
+        </methods>
+      </class> <!-- Console.Error.Login_Console -->
+    </classes>
+  </test> <!-- Console Error(failed) -->
+</suite> <!-- Failed suite [Console Error] -->

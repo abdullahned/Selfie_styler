@@ -75,6 +75,8 @@ public class FindJSErrorsLogging {
 	
 	public void extractJSLogsInfo() throws EmailException
 	{
+		
+		
 	  LogEntries logEntries =driver.manage().logs().get(LogType.BROWSER);
 	  for (LogEntry entry : logEntries)
 	  {
@@ -119,11 +121,12 @@ public class FindJSErrorsLogging {
 
 		email.setMsg(test);
 		
-		email.addTo("webfeedback@selfiestyler.com");
+		email.addTo("muhammad.abdullah@selfiestyler.com");
 		
 		email.send(); 
 	
 		System.out.println("=========Email Sent============="); 
+		
 	  
 	}
 	
@@ -139,6 +142,8 @@ public class FindJSErrorsLogging {
 	      Thread.sleep(2000);
 	      
 	  //    extractJSLogsInfo();
+	      
+	      
 	      
 	      Thread.sleep(1000);
 	      
@@ -156,7 +161,7 @@ public class FindJSErrorsLogging {
 	        
 	       Thread.sleep(3000);
 	       
-	    /*    Home_obj.Click_Brands();
+	       /*    Home_obj.Click_Brands();
 	        
 	        System.out.println("*************Brands Page******************\n");
 	        
@@ -164,7 +169,7 @@ public class FindJSErrorsLogging {
 	        
 	        extractJSLogsInfo();
 	        
-	        Home_obj.Click_MyAccount();
+	         Home_obj.Click_MyAccount();
 	        
 	        System.out.println("*************My Account Page******************\n");
 	        
