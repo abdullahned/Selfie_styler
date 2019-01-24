@@ -11,10 +11,10 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.annotations.Test;
+import com.pages.Home;
 
-import com.pages.Login;
 
-public class Login_Console extends Test_Base {
+public class Fitting_Room_console extends Test_Base {
 	
 	public void extractJSLogsInfo() throws EmailException
 	{
@@ -32,7 +32,6 @@ public class Login_Console extends Test_Base {
 		 
 		  if(Error_Message.contains("SEVERE"))
 		  {
-		    // System.out.println(Error_Message+"\n");
 			  
 			 arr.add(j+":"+" "+Error_Message); 
 			 
@@ -65,7 +64,7 @@ public class Login_Console extends Test_Base {
 		
 		email.setFrom("qa.auto.sstyler@gmail.com");
 		
-		email.setSubject("Login scenario - Console Error");
+		email.setSubject("Fitting Room - Console Error");
 
 		email.setMsg(test);
 		
@@ -74,23 +73,20 @@ public class Login_Console extends Test_Base {
 		email.send(); 
 	
 		System.out.println("=========Email Sent============="); 
-		
-	  
-	}  
+			  
+	}
 	
-	@Test(priority=0, enabled=true)
-	public void Login_Console_Error () throws Exception
+	@Test(priority=4, enabled=true)
+	public void FittingRoom_Console_Error () throws Exception
 	{
-	 extentTest = extent.startTest("Login_Console");
+	 extentTest = extent.startTest("FittingRoom_Console");
 	 
-	 Login Login_obj = new Login(driver);
+	 Home homeobj = new Home(driver);  
         
-     System.out.println("*************SelfieStyler: Login - SelfieStyler******************\n");
-
-     Login_obj.login_selfie_styler("qa-women@mailinator.com", "Germany0!");   
-
-     Thread.sleep(5000);
+     System.out.println("*************SelfieStyler: Fitting Room - SelfieStyler******************\n");
      
+     homeobj.Click_FittingRoom();
+
      extractJSLogsInfo();    
 
 }

@@ -12,10 +12,11 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.annotations.Test;
 
-import com.pages.Login;
+import com.pages.Contactus;
+import com.pages.Women;
 
-public class Login_Console extends Test_Base {
-	
+public class Contactus_console extends Test_Base {
+
 	public void extractJSLogsInfo() throws EmailException
 	{
 	  String test= "";
@@ -65,7 +66,7 @@ public class Login_Console extends Test_Base {
 		
 		email.setFrom("qa.auto.sstyler@gmail.com");
 		
-		email.setSubject("Login scenario - Console Error");
+		email.setSubject("Contact us - Console Error");
 
 		email.setMsg(test);
 		
@@ -74,25 +75,35 @@ public class Login_Console extends Test_Base {
 		email.send(); 
 	
 		System.out.println("=========Email Sent============="); 
-		
-	  
-	}  
+			  
+	} 
 	
-	@Test(priority=0, enabled=true)
-	public void Login_Console_Error () throws Exception
+	@Test(priority=3, enabled=true)
+	public void Contactus_Console_Error () throws Exception
 	{
-	 extentTest = extent.startTest("Login_Console");
+	 extentTest = extent.startTest("Contactus_Console");
 	 
-	 Login Login_obj = new Login(driver);
+	 Women womenobj = new Women(driver);  // create the object of women class
+	 
+	 Contactus contactusobj = new Contactus(driver); // create the object of contact us class
         
-     System.out.println("*************SelfieStyler: Login - SelfieStyler******************\n");
-
-     Login_obj.login_selfie_styler("qa-women@mailinator.com", "Germany0!");   
-
-     Thread.sleep(5000);
+     System.out.println("*************SelfieStyler: Contact us - SelfieStyler******************\n");
      
+     contactusobj.click_contactus(); // click the contact us link
+	 
+	 womenobj.Enter_Firstname(firstname);  // enter the first name
+	   
+	 womenobj.Enter_Lastname(lastname);  // enter the last name
+	   
+	 contactusobj.Enter_Email(email1);  // enter the email
+	 
+	 contactusobj.Enter_comments(); // enter the comments
+	 
+	 contactusobj.click_submit();  // click the submit button
+
      extractJSLogsInfo();    
 
 }
-
+		
+	
 }

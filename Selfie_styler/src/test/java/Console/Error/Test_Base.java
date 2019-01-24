@@ -1,10 +1,13 @@
 package Console.Error;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -32,6 +35,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class Test_Base {
 
+	public static Properties prop;
 	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
@@ -43,8 +47,20 @@ public class Test_Base {
 	  public String email = "Qtest"+r.nextInt(1000)+"@mailinator.com";
 	  public String email1 = "Qtest"+r.nextInt(1000)+"@mailinator.com";
 	  
-		
-		
+	  
+	  public Test_Base(){
+			try {
+				prop = new Properties();
+				FileInputStream ip = new FileInputStream("C:/Users/m.abdullah/git/Selfie_styler_updated/Selfie_styler/src/test/java/Console/Error/test_data.properties");
+				prop.load(ip);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	  
+	  
 		@BeforeTest
 		public void setExtent(){
 			extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/ConsoleError-Report.html", true);
@@ -64,8 +80,8 @@ public class Test_Base {
 			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			
-			driver.get("https://www.selfiestyler.com/");
-			
+			driver.get(prop.getProperty("url"));
+		
 		}
 		
 		
@@ -175,6 +191,7 @@ public class Test_Base {
 			
 		  
 		} */
+		
 		
 	}
 	

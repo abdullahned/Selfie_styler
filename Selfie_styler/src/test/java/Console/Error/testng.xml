@@ -11,11 +11,14 @@
 			<class name="Console.Error.Signup_women_console" />
 			
 			<class name="Console.Error.Signup_men_console" />
+			
+			<class name="Console.Error.Contactus_console" />
 
-
+            <class name="Console.Error.Fitting_Room_console" />
+            
+            <class name="Console.Error.Blog_console" />
 
 		</classes>
-
 
 
 	</test>

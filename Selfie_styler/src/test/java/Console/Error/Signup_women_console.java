@@ -69,7 +69,7 @@ public class Signup_women_console extends Test_Base {
 
 		email.setMsg(test);
 		
-		email.addTo("wali@selfiestyler.com");
+		email.addTo(prop.getProperty("email"));
 		
 		email.send(); 
 	
