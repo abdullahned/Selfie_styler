@@ -17,6 +17,15 @@
             <class name="Console.Error.Fitting_Room_console" />
             
             <class name="Console.Error.Blog_console" />
+            
+            <class name="Console.Error.Men_console" />
+            
+            <class name="Console.Error.Women_console" />
+            
+            <class name="Console.Error.Terms_condition_console" />
+            
+             <class name="Console.Error.Terms_Privacy_policy_console" />
+            
 
 		</classes>
 

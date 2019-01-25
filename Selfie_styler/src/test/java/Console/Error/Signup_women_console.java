@@ -51,6 +51,9 @@ public class Signup_women_console extends Test_Base {
 	 
 	 System.out.println(test);
 	 
+	 if(test.contains("SEVERE"))
+	 {
+	 
 	   System.out.println("=========Test Started=============");
 	  
 	   Email email = new SimpleEmail();
@@ -73,7 +76,7 @@ public class Signup_women_console extends Test_Base {
 		
 		email.send(); 
 	
-		System.out.println("=========Email Sent============="); 
+		System.out.println("=========Email Sent============="); }
 		
 	  
 	}  

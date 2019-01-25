@@ -12,10 +12,9 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.annotations.Test;
 
-import com.pages.Contactus;
-import com.pages.Women;
+import com.pages.Home;
 
-public class Contactus_console extends Test_Base {
+public class Terms_condition_console extends Test_Base {
 
 	public void extractJSLogsInfo() throws EmailException
 	{
@@ -54,7 +53,7 @@ public class Contactus_console extends Test_Base {
 	 
 	 if(test.contains("SEVERE"))
 	 
-	 {  System.out.println("=========Test Started=============");
+	 { System.out.println("=========Test Started=============");
 	  
 	   Email email = new SimpleEmail();
 		
@@ -68,7 +67,7 @@ public class Contactus_console extends Test_Base {
 		
 		email.setFrom("qa.auto.sstyler@gmail.com");
 		
-		email.setSubject("Contact us - Console Error");
+		email.setSubject("Terms & Condition - Console Error");
 
 		email.setMsg(test);
 		
@@ -77,35 +76,24 @@ public class Contactus_console extends Test_Base {
 		email.send(); 
 	
 		System.out.println("=========Email Sent============="); }
-			  
-	} 
+		
+	  
+	}  
 	
-	@Test(priority=3, enabled=true)
-	public void Contactus_Console_Error () throws Exception
+	@Test(priority=8, enabled=true)
+	public void Terms_condition_Console_Error () throws Exception
 	{
-	 extentTest = extent.startTest("Contactus_Console");
+	 extentTest = extent.startTest("Terms_Condition_Console");
 	 
-	 Women womenobj = new Women(driver);  // create the object of women class
+	 Home homeobj = new Home(driver);  
 	 
-	 Contactus contactusobj = new Contactus(driver); // create the object of contact us class
-        
-     System.out.println("*************SelfieStyler: Contact us - SelfieStyler******************\n");
+     System.out.println("*************SelfieStyler: Terms & Condition - SelfieStyler******************\n");
      
-     contactusobj.click_contactus(); // click the contact us link
-	 
-	 womenobj.Enter_Firstname(firstname);  // enter the first name
-	   
-	 womenobj.Enter_Lastname(lastname);  // enter the last name
-	   
-	 contactusobj.Enter_Email(email1);  // enter the email
-	 
-	 contactusobj.Enter_comments(); // enter the comments
-	 
-	 contactusobj.click_submit();  // click the submit button
-
+     homeobj.Click_Terms_condition();
+     
      extractJSLogsInfo();    
 
 }
-		
+	
 	
 }

@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Console.Error.Login_Console">
+      <class name="Console.Error.Blog_console">
         <methods>
           <include name="endReport"/>
           <include name="tearDown"/>
+          <include name="Blog_Console_Error"/>
           <include name="setExtent"/>
           <include name="setup"/>
-          <include name="Login_Console_Error"/>
         </methods>
-      </class> <!-- Console.Error.Login_Console -->
+      </class> <!-- Console.Error.Blog_console -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

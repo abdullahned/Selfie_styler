@@ -11,6 +11,7 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
@@ -117,7 +118,7 @@ public class Test_Base {
 			extent.close();
 		}
 		
-		public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException{
+	/*	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException{
 			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
@@ -128,7 +129,71 @@ public class Test_Base {
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
 			return destination;
+		}  */
+		
+		public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException{
+			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			
+			
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			
+			String encodedBase64 = null;
+			
+			FileInputStream fileInputStreamReader = null;
+			
+			try {
+				
+			fileInputStreamReader = new FileInputStream(source);
+			
+			byte[] bytes = new byte[(int)source.length()];
+			
+			fileInputStreamReader.read(bytes);
+			
+			encodedBase64 = new String(Base64.encodeBase64(bytes));
+			
+			} 
+			catch (FileNotFoundException e) {
+			e.printStackTrace();
+			} catch (IOException e) {
+			e.printStackTrace();
+			}
+			return "data:image/png;base64,"+encodedBase64;
+			
+			
+			
+	
+			
+		   /* String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" + screenshotName + dateName
+					+ ".png";
+			File finalDestination = new File(destination);
+			FileUtils.copyFile(source, finalDestination);
+			return destination;
+			
+			*/
+			
+			
+			
+			
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	/*
 	public static void extractJSLogsInfo() throws EmailException

@@ -3,24 +3,33 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Console Error]">
   <test thread-count="5" name="Console Error(failed)">
     <classes>
-      <class name="Console.Error.Signup_women_console">
+      <class name="Console.Error.Fitting_Room_console">
         <methods>
-          <include name="signup_women_console_error"/>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="FittingRoom_Console_Error"/>
+          <include name="setExtent"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Console.Error.Fitting_Room_console -->
+      <class name="Console.Error.Blog_console">
+        <methods>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="Blog_Console_Error"/>
+          <include name="setExtent"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Console.Error.Blog_console -->
+      <class name="Console.Error.Contactus_console">
+        <methods>
+          <include name="Contactus_Console_Error"/>
           <include name="endReport"/>
           <include name="tearDown"/>
           <include name="setExtent"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Console.Error.Signup_women_console -->
-      <class name="Console.Error.Login_Console">
-        <methods>
-          <include name="endReport"/>
-          <include name="tearDown"/>
-          <include name="setExtent"/>
-          <include name="setup"/>
-          <include name="Login_Console_Error"/>
-        </methods>
-      </class> <!-- Console.Error.Login_Console -->
+      </class> <!-- Console.Error.Contactus_console -->
     </classes>
   </test> <!-- Console Error(failed) -->
 </suite> <!-- Failed suite [Console Error] -->

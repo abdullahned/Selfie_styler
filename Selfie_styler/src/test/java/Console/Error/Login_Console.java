@@ -51,7 +51,9 @@ public class Login_Console extends Test_Base {
 	 
 	 System.out.println(test);
 	 
-	   System.out.println("=========Test Started=============");
+	 if(test.contains("SEVERE"))
+	 
+	 { System.out.println("=========Test Started=============");
 	  
 	   Email email = new SimpleEmail();
 		
@@ -73,7 +75,7 @@ public class Login_Console extends Test_Base {
 		
 		email.send(); 
 	
-		System.out.println("=========Email Sent============="); 
+		System.out.println("=========Email Sent============="); }
 		
 	  
 	}  
@@ -89,7 +91,7 @@ public class Login_Console extends Test_Base {
 
      Login_obj.login_selfie_styler("qa-women@mailinator.com", "Germany0!");   
 
-     Thread.sleep(5000);
+     Thread.sleep(8000);
      
      extractJSLogsInfo();    
 
