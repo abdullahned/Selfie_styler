@@ -24,7 +24,7 @@
             
             <class name="Console.Error.Terms_condition_console" />
             
-             <class name="Console.Error.Terms_Privacy_policy_console" />
+            <class name="Console.Error.Privacy_policy_console" />
             
 
 		</classes>
