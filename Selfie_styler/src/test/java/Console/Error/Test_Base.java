@@ -102,6 +102,8 @@ public class Test_Base {
 			}
 			else if(result.getStatus()==ITestResult.SUCCESS){
 				extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
+				
+				// extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.);
 
 			}
 			
