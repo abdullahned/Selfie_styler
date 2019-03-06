@@ -1,229 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="18" total="28" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Error" duration-ms="287308" started-at="2019-01-25T18:01:41Z" finished-at="2019-01-25T18:06:28Z">
+  <suite name="Default suite" duration-ms="54626" started-at="2019-03-06T16:29:02Z" finished-at="2019-03-06T16:29:56Z">
     <groups>
     </groups>
-    <test name="Console Error" duration-ms="287308" started-at="2019-01-25T18:01:41Z" finished-at="2019-01-25T18:06:28Z">
-      <class name="Console.Error.Signup_women_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Signup_women_console@31ef45e3]" name="setup" is-config="true" duration-ms="9531" started-at="2019-01-25T18:02:11Z" finished-at="2019-01-25T18:02:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signup_women_console_error()[pri:1, instance:Console.Error.Signup_women_console@31ef45e3]" name="signup_women_console_error" duration-ms="34320" started-at="2019-01-25T18:02:20Z" finished-at="2019-01-25T18:02:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signup_women_console_error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Signup_women_console@31ef45e3]" name="tearDown" is-config="true" duration-ms="653" started-at="2019-01-25T18:02:55Z" finished-at="2019-01-25T18:02:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signup_women_console_error status=SUCCESS method=Signup_women_console.signup_women_console_error()[pri:1, instance:Console.Error.Signup_women_console@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Signup_women_console -->
-      <class name="Console.Error.Fitting_Room_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Fitting_Room_console@14bf9759]" name="setup" is-config="true" duration-ms="11927" started-at="2019-01-25T18:04:16Z" finished-at="2019-01-25T18:04:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="FittingRoom_Console_Error()[pri:4, instance:Console.Error.Fitting_Room_console@14bf9759]" name="FittingRoom_Console_Error" duration-ms="16561" started-at="2019-01-25T18:04:28Z" finished-at="2019-01-25T18:04:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FittingRoom_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Fitting_Room_console@14bf9759]" name="tearDown" is-config="true" duration-ms="674" started-at="2019-01-25T18:04:44Z" finished-at="2019-01-25T18:04:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=FittingRoom_Console_Error status=SUCCESS method=Fitting_Room_console.FittingRoom_Console_Error()[pri:4, instance:Console.Error.Fitting_Room_console@14bf9759] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Fitting_Room_console -->
-      <class name="Console.Error.Women_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Women_console@4f7d0008]" name="setup" is-config="true" duration-ms="9662" started-at="2019-01-25T18:05:31Z" finished-at="2019-01-25T18:05:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Women_Console_Error()[pri:7, instance:Console.Error.Women_console@4f7d0008]" name="Women_Console_Error" duration-ms="11432" started-at="2019-01-25T18:05:40Z" finished-at="2019-01-25T18:05:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Women_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Women_console@4f7d0008]" name="tearDown" is-config="true" duration-ms="693" started-at="2019-01-25T18:05:52Z" finished-at="2019-01-25T18:05:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Women_Console_Error status=SUCCESS method=Women_console.Women_Console_Error()[pri:7, instance:Console.Error.Women_console@4f7d0008] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Women_console -->
-      <class name="Console.Error.Privacy_policy_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Privacy_policy_console@589838eb]" name="setup" is-config="true" duration-ms="10823" started-at="2019-01-25T18:06:09Z" finished-at="2019-01-25T18:06:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Privacy_policy_Console_Error()[pri:9, instance:Console.Error.Privacy_policy_console@589838eb]" name="Privacy_policy_Console_Error" duration-ms="7663" started-at="2019-01-25T18:06:19Z" finished-at="2019-01-25T18:06:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Privacy_policy_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Privacy_policy_console@589838eb]" name="tearDown" is-config="true" duration-ms="652" started-at="2019-01-25T18:06:27Z" finished-at="2019-01-25T18:06:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Privacy_policy_Console_Error status=SUCCESS method=Privacy_policy_console.Privacy_policy_Console_Error()[pri:9, instance:Console.Error.Privacy_policy_console@589838eb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Privacy_policy_console -->
-      <class name="Console.Error.Login_Console">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:Console.Error.Login_Console@57fffcd7]" name="setExtent" is-config="true" duration-ms="114" started-at="2019-01-25T18:01:41Z" finished-at="2019-01-25T18:01:41Z">
+    <test name="Default test" duration-ms="54626" started-at="2019-03-06T16:29:02Z" finished-at="2019-03-06T16:29:56Z">
+      <class name="Deployment.Testcases.Testcases_Currentlook">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2]" name="setExtent" is-config="true" duration-ms="157" started-at="2019-03-06T16:29:02Z" finished-at="2019-03-06T16:29:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Login_Console@57fffcd7]" name="setup" is-config="true" duration-ms="10959" started-at="2019-01-25T18:01:41Z" finished-at="2019-01-25T18:01:52Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2]" name="setup" is-config="true" duration-ms="12604" started-at="2019-03-06T16:29:02Z" finished-at="2019-03-06T16:29:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Login_Console_Error()[pri:0, instance:Console.Error.Login_Console@57fffcd7]" name="Login_Console_Error" duration-ms="18307" started-at="2019-01-25T18:01:52Z" finished-at="2019-01-25T18:02:10Z">
+        <test-method status="PASS" signature="Acceptance_criteria1()[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2]" name="Acceptance_criteria1" duration-ms="40692" started-at="2019-03-06T16:29:15Z" finished-at="2019-03-06T16:29:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Login_Console@57fffcd7]" name="tearDown" is-config="true" duration-ms="620" started-at="2019-01-25T18:02:10Z" finished-at="2019-01-25T18:02:11Z">
+        </test-method> <!-- Acceptance_criteria1 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2]" name="tearDown" is-config="true" duration-ms="813" started-at="2019-03-06T16:29:55Z" finished-at="2019-03-06T16:29:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_Console_Error status=SUCCESS method=Login_Console.Login_Console_Error()[pri:0, instance:Console.Error.Login_Console@57fffcd7] output={null}]]]>
+                <![CDATA[[TestResult name=Acceptance_criteria1 status=SUCCESS method=Testcases_Currentlook.Acceptance_criteria1()[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:Console.Error.Login_Console@57fffcd7]" name="endReport" is-config="true" duration-ms="263" started-at="2019-01-25T18:06:28Z" finished-at="2019-01-25T18:06:28Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:Deployment.Testcases.Testcases_Currentlook@6a41eaa2]" name="endReport" is-config="true" duration-ms="334" started-at="2019-03-06T16:29:56Z" finished-at="2019-03-06T16:29:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- Console.Error.Login_Console -->
-      <class name="Console.Error.Blog_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Blog_console@5f341870]" name="setup" is-config="true" duration-ms="9579" started-at="2019-01-25T18:04:45Z" finished-at="2019-01-25T18:04:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Blog_Console_Error()[pri:5, instance:Console.Error.Blog_console@5f341870]" name="Blog_Console_Error" duration-ms="5118" started-at="2019-01-25T18:04:55Z" finished-at="2019-01-25T18:05:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Blog_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Blog_console@5f341870]" name="tearDown" is-config="true" duration-ms="687" started-at="2019-01-25T18:05:00Z" finished-at="2019-01-25T18:05:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Blog_Console_Error status=SUCCESS method=Blog_console.Blog_Console_Error()[pri:5, instance:Console.Error.Blog_console@5f341870] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Blog_console -->
-      <class name="Console.Error.Contactus_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Contactus_console@3c0ecd4b]" name="setup" is-config="true" duration-ms="10336" started-at="2019-01-25T18:03:43Z" finished-at="2019-01-25T18:03:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Contactus_Console_Error()[pri:3, instance:Console.Error.Contactus_console@3c0ecd4b]" name="Contactus_Console_Error" duration-ms="22288" started-at="2019-01-25T18:03:53Z" finished-at="2019-01-25T18:04:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Contactus_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Contactus_console@3c0ecd4b]" name="tearDown" is-config="true" duration-ms="663" started-at="2019-01-25T18:04:15Z" finished-at="2019-01-25T18:04:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Contactus_Console_Error status=SUCCESS method=Contactus_console.Contactus_Console_Error()[pri:3, instance:Console.Error.Contactus_console@3c0ecd4b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Contactus_console -->
-      <class name="Console.Error.Terms_condition_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Terms_condition_console@271053e1]" name="setup" is-config="true" duration-ms="9596" started-at="2019-01-25T18:05:52Z" finished-at="2019-01-25T18:06:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Terms_condition_Console_Error()[pri:8, instance:Console.Error.Terms_condition_console@271053e1]" name="Terms_condition_Console_Error" duration-ms="5805" started-at="2019-01-25T18:06:02Z" finished-at="2019-01-25T18:06:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Terms_condition_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Terms_condition_console@271053e1]" name="tearDown" is-config="true" duration-ms="650" started-at="2019-01-25T18:06:08Z" finished-at="2019-01-25T18:06:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Terms_condition_Console_Error status=SUCCESS method=Terms_condition_console.Terms_condition_Console_Error()[pri:8, instance:Console.Error.Terms_condition_console@271053e1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Terms_condition_console -->
-      <class name="Console.Error.Signup_men_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Signup_men_console@598067a5]" name="setup" is-config="true" duration-ms="11449" started-at="2019-01-25T18:02:55Z" finished-at="2019-01-25T18:03:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signup_men_console_error()[pri:2, instance:Console.Error.Signup_men_console@598067a5]" name="signup_men_console_error" duration-ms="35246" started-at="2019-01-25T18:03:07Z" finished-at="2019-01-25T18:03:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signup_men_console_error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Signup_men_console@598067a5]" name="tearDown" is-config="true" duration-ms="652" started-at="2019-01-25T18:03:42Z" finished-at="2019-01-25T18:03:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signup_men_console_error status=SUCCESS method=Signup_men_console.signup_men_console_error()[pri:2, instance:Console.Error.Signup_men_console@598067a5] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Signup_men_console -->
-      <class name="Console.Error.Men_console">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Console.Error.Men_console@553f17c]" name="setup" is-config="true" duration-ms="9060" started-at="2019-01-25T18:05:00Z" finished-at="2019-01-25T18:05:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Men_Console_Error()[pri:6, instance:Console.Error.Men_console@553f17c]" name="Men_Console_Error" duration-ms="20617" started-at="2019-01-25T18:05:09Z" finished-at="2019-01-25T18:05:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Men_Console_Error -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Console.Error.Men_console@553f17c]" name="tearDown" is-config="true" duration-ms="662" started-at="2019-01-25T18:05:30Z" finished-at="2019-01-25T18:05:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Men_Console_Error status=SUCCESS method=Men_console.Men_Console_Error()[pri:6, instance:Console.Error.Men_console@553f17c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Console.Error.Men_console -->
-    </test> <!-- Console Error -->
-  </suite> <!-- Console Error -->
+      </class> <!-- Deployment.Testcases.Testcases_Currentlook -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -3,9 +3,11 @@ package com.pages;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utility.HighlightLocator;
 import Utility.Synchronization;
 
 public class Home {
@@ -17,6 +19,9 @@ public class Home {
 	this.driver=ldriver;
 	PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(linkText="Dresses") 
+	WebElement Dresses;	
 	
 	@FindBy(linkText="Brands") 
 	WebElement Brands;
@@ -44,6 +49,17 @@ public class Home {
 	
 	@FindBy(linkText="Privacy Policy") 
 	WebElement Privacy_policy;
+	
+	
+	public void Click_Dresses() throws Exception   // click the dresses category
+	{
+		
+		Actions action = new Actions(driver);
+
+		action.moveToElement(Dresses).click().perform();
+		
+	}
+	
 	
 	
 	public void Click_Brands() throws Exception   // click the sign up click
