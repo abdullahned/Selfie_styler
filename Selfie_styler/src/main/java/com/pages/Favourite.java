@@ -19,7 +19,15 @@ public class Favourite {
 	  this.driver=ldriver;
 	  PageFactory.initElements(driver, this);
 	}
-				
+		
+	
+	@FindBy(xpath="//a[contains(text(),'Add Fav')]") 
+	WebElement Add_fav;
+	
+	@FindBy(xpath="//a[contains(text(),'Remove Fav')]") 
+	WebElement Remove_Fav;
+	
+	
 	@FindBy(xpath="//a[@id='favorite_look_heart']") // need to change if products change
 	WebElement favourite_look;
 	
@@ -32,16 +40,6 @@ public class Favourite {
 	@FindBy(xpath="//*[@data-product-id='529753374774']") // need to change if products change 
 	WebElement favourite_product3;
 	
-	@FindBy(xpath="//*[@data-product-id='1484878413878']") // need to change if products change
-	WebElement men_favourite_product1;
-	
-	@FindBy(xpath="//*[@data-product-id='1484887916598']") // need to change if products change 
-	WebElement men_favourite_product2;
-	
-	@FindBy(xpath="//*[@data-product-id='1484894142518']") // need to change if products change 
-	WebElement men_favourite_product3;
-	
-	
 	
 	@FindBy(xpath="//a[contains(text(),'Favorites')]") 
 	WebElement favourite;
@@ -52,6 +50,22 @@ public class Favourite {
 	@FindBy(xpath="//a[@class='btn add-to-cart-btn']") 
 	WebElement accept_prod;
 	
+	
+	public void click_addFav() throws Exception
+	{
+		
+		Synchronization.Exception_Handling(driver, Add_fav, 30);
+	}
+	
+	
+	public String click_removeFav() throws Exception
+	{
+        String Remove_Fav_text = Remove_Fav.getText();
+		
+		return Remove_Fav_text;
+		
+	}
+		
 	
 	public void click_favourite() throws Exception
 	{

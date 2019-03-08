@@ -23,6 +23,9 @@ public class Home {
 	@FindBy(linkText="Dresses") 
 	WebElement Dresses;	
 	
+	@FindBy(xpath="//button[@id='fr_tutorial_hide']") 
+	WebElement tutorial_popup;
+	
 	@FindBy(linkText="Brands") 
 	WebElement Brands;
 	
@@ -56,11 +59,20 @@ public class Home {
 		
 		Actions action = new Actions(driver);
 
-		action.moveToElement(Dresses).click().perform();
-		
+		action.moveToElement(Dresses).click().perform();	
 	}
 	
 	
+	public void close_tutorial_popup() throws Exception
+	{
+		//JavascriptExecutor js = (JavascriptExecutor)driver;
+		//js.executeScript("arguments[0].click();", tutorial_popup);
+		
+		
+		Synchronization.Exception_Handling(driver, tutorial_popup, 30);	
+		
+	}
+
 	
 	public void Click_Brands() throws Exception   // click the sign up click
 	{
