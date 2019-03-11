@@ -1,5 +1,7 @@
 package Deployment.Testcases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ import resources.TestBase;
 public class Verify_Currentlook extends TestBase {
 
 
-	@Test(priority=0, enabled=true)
+	@Test(priority=1, enabled=false)
 	public void Acceptance_criteria_1() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#1");
@@ -34,7 +36,7 @@ public class Verify_Currentlook extends TestBase {
 		
 		Home_obj.close_tutorial_popup();
 		
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		
 		Fittingroom_Currentlook_obj.click_product_slide();
 		
@@ -51,7 +53,7 @@ public class Verify_Currentlook extends TestBase {
 	}
 	
 
-	@Test(priority=1, enabled=true)
+	@Test(priority=2, enabled=false)
 	public void Acceptance_criteria_2() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#2");
@@ -74,7 +76,7 @@ public class Verify_Currentlook extends TestBase {
 		
 		Home_obj.close_tutorial_popup();
 		
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		
 		Fittingroom_Currentlook_obj.click_product_slide();
 		
@@ -90,9 +92,77 @@ public class Verify_Currentlook extends TestBase {
 		
 		String Removefav_text = Favourite_obj.click_removeFav();
 		
-		Assert.assertEquals(Removefav_text, "Remove Fav", "favorite verified");	
-		
+		Assert.assertEquals(Removefav_text, "Remove Fav", "favorite verified");			
 	}
 	
+
+	@Test(priority=3, enabled=false)
+	public void Acceptance_criteria_3() throws Exception
+	{
+		extentTest = extent.startTest("Fitting Room Current Look AC#2");
 		
+		Login Login_obj = new Login(driver); 
+			
+		Home Home_obj = new Home(driver);
+			
+		Fittingroom_Currentlook Fittingroom_Currentlook_obj = new Fittingroom_Currentlook(driver);
+		
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
+		
+		Thread.sleep(3000);
+		
+		Home_obj.Click_Dresses();
+		
+		Thread.sleep(2000);
+		
+		Home_obj.close_tutorial_popup();
+		
+		Thread.sleep(4000);
+		
+		Fittingroom_Currentlook_obj.click_product_slide();
+		
+		Thread.sleep(2000);
+		
+		String detail_text = Fittingroom_Currentlook_obj.currentlook_detail();
+			
+		Assert.assertEquals(detail_text, "Details", "current look verified");	
+		
+		Fittingroom_Currentlook_obj.click_currentlook_detail();
+		
+         String additem_tocart = Fittingroom_Currentlook_obj.additem_tocart();
+		
+		Assert.assertEquals(additem_tocart, "Add item to cart", "Add to cart button is available");
+	
+	}
+		
+	@Test(priority=4, enabled=true)
+	public void Acceptance_criteria_4() throws Exception
+	{
+		extentTest = extent.startTest("Fitting Room Current Look AC#2");
+		
+		Login Login_obj = new Login(driver); 
+			
+		Home Home_obj = new Home(driver);
+			
+		Fittingroom_Currentlook Fittingroom_Currentlook_obj = new Fittingroom_Currentlook(driver);
+		
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
+		
+		
+		Home_obj.Click_Dresses();
+		
+		Home_obj.close_tutorial_popup();
+		
+		Thread.sleep(3000);
+		
+        Fittingroom_Currentlook_obj.search_product();
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@id='bc-sf-search-box-0']")).sendKeys(Keys.ENTER);
+		
+		Thread.sleep(4000);
+
+	
+	}
 }

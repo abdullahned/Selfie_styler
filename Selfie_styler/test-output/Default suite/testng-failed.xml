@@ -5,9 +5,9 @@
     <classes>
       <class name="Deployment.Testcases.Verify_Currentlook">
         <methods>
+          <include name="Acceptance_criteria_4"/>
           <include name="tearDown"/>
           <include name="endReport"/>
-          <include name="Acceptance_criteria_1"/>
           <include name="setExtent"/>
           <include name="setup"/>
         </methods>
