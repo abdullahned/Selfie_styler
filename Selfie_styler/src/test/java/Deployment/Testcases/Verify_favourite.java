@@ -1,74 +1,123 @@
 package Deployment.Testcases;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import static org.testng.Assert.assertEquals;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Utility.BrowserFactory;
 import com.pages.*;
 
-public class Verify_favourite {
+import resources.TestBase;
+
+public class Verify_favourite extends TestBase {
 	
-    Login Login_obj;
-    
-	Shop_Checkout Shop_Checkout_obj;
-	
-	Favourite Favourite_obj;
-	
-	@Test(priority=23, enabled=true)
-	public void validate_favourite() throws Exception
+	@Test(priority=1, enabled=false)
+	public void Acceptance_criteria_1() throws Exception
 	{
+        extentTest = extent.startTest("Fitting Room Favourite AC#1");
 		
-	   // This will launch browser and specific url 
-	    WebDriver driver=BrowserFactory.startBrowser("chrome", "https://selfiestyler.com/login-deactivate/");  // live Environment
-		   
-		Login_obj = new Login(driver); // create the object of login class
+		Login Login_obj = new Login(driver); 
+			
+		Home Home_obj = new Home(driver);
 		
-		Favourite_obj = new Favourite(driver);  // create the object of favorite class 
-		
-		Shop_Checkout_obj = new Shop_Checkout(driver); // create the object of shop_checkout class
-		
-		Login_obj.login_selfie_styler("qa-women@mailinator.com", "Germany0!");
-		 
-		Thread.sleep(5000);
-		   
-		Shop_Checkout_obj.click_Women(); // click the women link
-		
-		Favourite_obj.click_favourite_product1();
+		Favourite Favourite_obj = new Favourite(driver);
+			
+		Fittingroom_Currentlook Fittingroom_Currentlook_obj = new Fittingroom_Currentlook(driver);
+
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
 		
 		Thread.sleep(3000);
 		
-		Favourite_obj.click_favourite_product2();
-		
-		Thread.sleep(3000);
-		
-		JavascriptExecutor jkl = (JavascriptExecutor)driver;
-		
-	    jkl.executeScript("window.scrollBy(0,-500)", "");
-		
-		Favourite_obj.click_favourite();
+		Home_obj.Click_Dresses();
 		
 		Thread.sleep(2000);
 		
-		Favourite_obj.click_remove_product();
+		Home_obj.close_tutorial_popup();
+		
+		Thread.sleep(4000);
+		
+		Fittingroom_Currentlook_obj.click_product_slide();
+		
+		Thread.sleep(4000);
+		
+		Favourite_obj.click_fittingroom_fav();
+		
+		Thread.sleep(4000);
+		
+		String fav_prod = Favourite_obj.get_fittingroom_fav();
+		
+		System.out.println(fav_prod);
+		
+		Assert.assertEquals(fav_prod, "remove", "favorite verified");
+		
+		Thread.sleep(4000);
+		
+		Favourite_obj.click_fittingroom_fav();
+		
+		String remove_fav_prod = Favourite_obj.get_fittingroom_fav();
+		
+		Assert.assertEquals(remove_fav_prod, "remove", "favorite verified");
+		
+		Thread.sleep(2000);
+		
+		Fittingroom_Currentlook_obj.click_product_slide();
+		
+		Thread.sleep(2000);
+		
+		String notfav_prod = Favourite_obj.get_fittingroom_fav();
+		
+		Assert.assertEquals(notfav_prod, "add", "favorite verified");
+		
+	}
+	
+	
+	@Test(priority=2, enabled=true)
+	public void Acceptance_criteria_2() throws Exception
+	{
+        extentTest = extent.startTest("Fitting Room Favourite AC#2");
+		
+		Login Login_obj = new Login(driver); 
+			
+		Home Home_obj = new Home(driver);
+		
+		Favourite Favourite_obj = new Favourite(driver);
+			
+		Fittingroom_Currentlook Fittingroom_Currentlook_obj = new Fittingroom_Currentlook(driver);
+
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
 		
 		Thread.sleep(3000);
 		
-		Favourite_obj.switch_to_alert();
+		Home_obj.Click_Dresses();
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
-		Shop_Checkout_obj.click_Women(); // click the shop link
+		Home_obj.close_tutorial_popup();
 		
-		jkl.executeScript("window.scrollBy(0,-500)", "");
+		Thread.sleep(4000);
 		
-		Favourite_obj.click_favourite();
+		Fittingroom_Currentlook_obj.click_product_slide();
 		
-		Favourite_obj.click_accept_product();
+		Thread.sleep(4000);
+		
+		Favourite_obj.click_sharelook();
+		
+		Thread.sleep(4000);
+		
+		String facebook = Favourite_obj.validate_facebook();
+		
+		Assert.assertEquals(facebook, "Facebook", "facebook verified");
+		
+        String twitter = Favourite_obj.validate_twitter();
+		
+		Assert.assertEquals(twitter, "Twitter", "twitter verified");
+		
+        String pinterest = Favourite_obj.validate_pinterest();
+		
+		Assert.assertEquals(pinterest, "Pinterest", "pinterest verified");
+		
+		
 
-		Thread.sleep(5000);
-		
-		driver.quit();
 	}
 
 }

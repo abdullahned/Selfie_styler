@@ -1,10 +1,15 @@
 package com.pages;
 
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
+import Utility.HighlightLocator;
 import Utility.Synchronization;
 
 public class Fittingroom_Currentlook {
@@ -24,7 +29,7 @@ public class Fittingroom_Currentlook {
 	@FindBy(xpath="//a[@class='fitting_room_cl_prod_link']") 
 	WebElement currentlook_detail;
 	
-	@FindBy(xpath="//button[@id='pd_add_cart_btn_950']") 
+	@FindBy(xpath="//button[starts-with(@id,'pd_add_cart_btn_')]") 
 	WebElement add_item_to_cart;
 	
 	@FindBy(xpath="//input[@id='bc-sf-search-box-0']") 
@@ -32,6 +37,15 @@ public class Fittingroom_Currentlook {
 	
 	@FindBy(xpath="//select[@id='color_1404']") 
 	WebElement selectcolor;
+	
+	@FindBy(xpath="//button[starts-with(@id,'product-add-')]") 
+	WebElement add_to_cart;
+	
+	@FindBy(xpath="//span[@id='cartCount']") 
+    WebElement cartCount;
+	
+	@FindBy(xpath="//a[starts-with(@id,'9')]") 
+	WebElement hanger;
 	
 	
 	public void click_product_slide() throws Exception
@@ -72,14 +86,42 @@ public class Fittingroom_Currentlook {
 	
     public void select_color()
     {
-    	
-    	
+    	HighlightLocator.highLightElement(driver, selectcolor);
+		 
+		Select select = new Select(selectcolor);
+		
+        List<WebElement> liElements = select.getOptions();
+		
+		int size = liElements.size();
+		
+		int randnMumber = ThreadLocalRandom.current().nextInt(1, size);
+		
+		liElements.get(randnMumber).click();	
     	
     }
 	
+    public void click_add_to_cart() throws Exception
+	{
+		
+		Synchronization.Exception_Handling(driver, add_to_cart, 30);	
+	}
 	
-	
-	
-	
+    
+    public String get_cart_count()
+	{
+	    
+		String count = cartCount.getText();
+		return count;
+		
+	}
+    
+    public void click_hanger() throws Exception
+   	{
+   		hanger.click();
+
+   	}
+   	
+
+    
 	
 }

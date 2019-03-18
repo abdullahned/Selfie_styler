@@ -52,7 +52,7 @@ public class Favorite_FittingRoom {
 	   
 	   Thread.sleep(5000);
 	   
-	   Favourite_obj.click_favourite_look();
+	  // Favourite_obj.click_favourite_look();
 	   
 	//   String text = driver.findElement(By.xpath("//div[@id='modal_content']")).getText();
 	   
@@ -88,7 +88,7 @@ public class Favorite_FittingRoom {
 	   
 	   Shop_Checkout_obj.click_Women(); // click the women link
 	   
-       Favourite_obj.click_favourite_look();
+      // Favourite_obj.click_favourite_look();
 	   
 	   Thread.sleep(8000);
 	  
