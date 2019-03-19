@@ -11,7 +11,7 @@ import resources.TestBase;
 
 public class Verify_favourite extends TestBase {
 	
-	@Test(priority=1, enabled=false)
+	@Test(priority=1, enabled=true)
 	public void Acceptance_criteria_1() throws Exception
 	{
         extentTest = extent.startTest("Fitting Room Favourite AC#1");
