@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Deployment.Testcases.verify_productdetails">
+      <class name="Deployment.Testcases.verify_navigation">
         <methods>
-          <include name="Acceptance_criteria_1"/>
           <include name="tearDown"/>
+          <include name="Acceptance_criteria_1"/>
           <include name="endReport"/>
           <include name="setExtent"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Deployment.Testcases.verify_productdetails -->
+      </class> <!-- Deployment.Testcases.verify_navigation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -36,7 +36,7 @@ public class Verify_favourite extends TestBase {
 		
 		Thread.sleep(4000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+		Fittingroom_Currentlook_obj.click_hanger();
 		
 		Thread.sleep(4000);
 		
@@ -96,7 +96,7 @@ public class Verify_favourite extends TestBase {
 		
 		Thread.sleep(4000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+		Fittingroom_Currentlook_obj.click_hanger();
 		
 		Thread.sleep(4000);
 		
