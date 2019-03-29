@@ -131,6 +131,21 @@ public class Favourite {
 	   return facebook_text;		
 	}
 	
+	public void click_twitter() throws Exception
+	{	
+	  
+	  Synchronization.Exception_Handling(driver, twitter, 30);
+		
+	}
+	
+	public void click_facebook() throws Exception
+	{	
+	  
+	  Synchronization.Exception_Handling(driver, facebook, 30);
+		
+	}
+	
+	
 	public String validate_twitter() throws Exception
 	{	
 	  String twitter_text = twitter.getText();

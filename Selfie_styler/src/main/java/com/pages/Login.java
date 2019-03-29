@@ -22,7 +22,7 @@ public class Login {
 	}
 	
 	
-	@FindBy(xpath="//a[contains(text(),'Log in')]") 
+	@FindBy(xpath="//a[contains(text(),'Login')]") 
 	WebElement clickLogin; 
 	
 	@FindBy(id="email") 

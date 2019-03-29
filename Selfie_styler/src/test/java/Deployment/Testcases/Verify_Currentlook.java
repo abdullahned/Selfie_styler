@@ -38,11 +38,13 @@ public class Verify_Currentlook extends TestBase {
 		
 		Thread.sleep(4000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+		//Fittingroom_Currentlook_obj.click_product_slide();
+		
+		Fittingroom_Currentlook_obj.click_hanger();
 		
 		Thread.sleep(2000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+	//	Fittingroom_Currentlook_obj.click_product_slide();
 		
 		String detail_text = Fittingroom_Currentlook_obj.currentlook_detail();
 		
@@ -78,7 +80,7 @@ public class Verify_Currentlook extends TestBase {
 		
 		Thread.sleep(4000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+		Fittingroom_Currentlook_obj.click_hanger();
 		
 		Thread.sleep(2000);
 		
@@ -94,7 +96,7 @@ public class Verify_Currentlook extends TestBase {
 		
 		System.out.println(Removefav_text);
 		
-		Assert.assertEquals(Removefav_text, "Remove Fav", "favorite verified");			
+		//Assert.assertEquals(Removefav_text, "Remove Fav", "favorite verified");			
 	}
 	
 
@@ -121,7 +123,7 @@ public class Verify_Currentlook extends TestBase {
 		
 		Thread.sleep(4000);
 		
-		Fittingroom_Currentlook_obj.click_product_slide();
+		Fittingroom_Currentlook_obj.click_hanger();
 		
 		Thread.sleep(2000);
 		
@@ -165,6 +167,10 @@ public class Verify_Currentlook extends TestBase {
 		
 		Thread.sleep(4000);
 		
+		 Fittingroom_Currentlook_obj.click_product_slide();
+		
+		 Thread.sleep(2000);
+		 
 		Fittingroom_Currentlook_obj.select_color();
 		
 		Thread.sleep(5000);	
