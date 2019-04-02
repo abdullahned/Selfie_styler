@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -61,8 +64,20 @@ public class TestBase {
 	@BeforeMethod
 	public void setup(){
 		
+		Map<String, Object> prefs = new HashMap<String, Object>();
+        
+        // Set the notification setting it will override the default setting
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+
+        // Create object of ChromeOption class
+        ChromeOptions options = new ChromeOptions();
+
+        // Set the experimental option
+         options.setExperimentalOption("prefs", prefs);
+
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\m.abdullah\\Downloads\\chromedriver.exe");
-		driver = new ChromeDriver(); 
+		
+		driver = new ChromeDriver(options); 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
@@ -97,7 +112,7 @@ public class TestBase {
 		
 		
 		extent.endTest(extentTest); //ending test and ends the current test and prepare to create html report
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

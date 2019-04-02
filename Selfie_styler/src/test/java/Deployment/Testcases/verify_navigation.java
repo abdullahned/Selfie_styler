@@ -54,7 +54,7 @@ public class verify_navigation extends TestBase {
 		
 	   Assert.assertEquals(Contact_us, "Contact Us", "Contact Us verified");
 	   
-	   Thread.sleep(2000);
+	   Thread.sleep(4000);
 	  
 }
 	
@@ -109,7 +109,7 @@ public class verify_navigation extends TestBase {
 	}
 	
 	
-	@Test(priority=4, enabled=true)
+	@Test(priority=4, enabled=false)
     public void Acceptance_criteria_4() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#4");
@@ -146,12 +146,97 @@ public class verify_navigation extends TestBase {
 		
 		Thread.sleep(2000);
 		
-		Navigation_obj.switch_to_other_page();
+		Navigation_obj.switch_to_other_page();	
+	}
 	
+	
+	@Test(priority=5, enabled=false)
+    public void Acceptance_criteria_5() throws Exception
+	{
+		extentTest = extent.startTest("Navigation AC#5");
 		
+		Navigation Navigation_obj = new Navigation(driver);
 		
+		Navigation_obj.switch_to_facebook();
+	
+	}
+	
+	@Test(priority=6, enabled=false)
+    public void Acceptance_criteria_6() throws Exception
+	{
+		extentTest = extent.startTest("Navigation AC#6");
 		
+		Login Login_obj = new Login(driver);
 		
+		Fittingroom_Currentlook Fittingroom_Currentlook_obj = new Fittingroom_Currentlook(driver);
+		
+		Home Home_obj = new Home(driver);
+		
+		Navigation Navigation_obj = new Navigation(driver);
+		
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
+		
+		Home_obj.Click_Dresses();
+		
+        Thread.sleep(2000);
+		
+		Home_obj.close_tutorial_popup();
+		
+        Thread.sleep(4000);
+		
+		Fittingroom_Currentlook_obj.click_hanger();
+		
+		Fittingroom_Currentlook_obj.click_add_to_cart();
+		
+		Thread.sleep(2000);
+		
+		Navigation_obj.click_shopping_cart();
+		
+		Thread.sleep(2000);
+		
+		Navigation_obj.click_view_cart();
+		
+		Thread.sleep(1000);
+		
+		Navigation_obj.click_shopping_cart();
+		
+		Thread.sleep(1000);
+		
+		Navigation_obj.click_checkout();
+		
+		Thread.sleep(4000);
+		
+		String continue_shopping = Navigation_obj.continue_shopping();
+		
+		Assert.assertEquals(continue_shopping, "Continue to shipping method", "continue shopping verified");		  
+	}
+	
+	
+	@Test(priority=7, enabled=true)
+    public void Acceptance_criteria_7() throws Exception
+	{
+		extentTest = extent.startTest("Navigation AC#7");
+		
+		Login Login_obj = new Login(driver);
+		
+		Navigation Navigation_obj = new Navigation(driver);
+		
+		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
+		
+		Navigation_obj.click_profile();
+		
+		Thread.sleep(1000);
+		
+		Navigation_obj.click_Personal_information();
+		
+		Thread.sleep(2000);
+		
+        String personal_information = Navigation_obj.get_personal_information();
+		
+		Assert.assertEquals(personal_information, "Personal information", "personal_information verified");
+		
+	
+	
 	}
 	
 	

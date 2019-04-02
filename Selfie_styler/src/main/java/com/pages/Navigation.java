@@ -56,15 +56,6 @@ WebDriver driver;
 	@FindBy(xpath="//li[@class='no_notification']") 
 	WebElement no_notification;
 	
-	@FindBy(xpath="//input[@id='username_or_email']") 
-	WebElement twitter_email;
-	
-	@FindBy(xpath="//input[@id='password']") 
-	WebElement twitter_password;
-	
-	@FindBy(xpath="//input[@class='button selected submit']") 
-	WebElement twitter_submit;
-	
 	@FindBy(xpath="//input[@id='email']") 
 	WebElement facebook_email;
 	
@@ -77,11 +68,36 @@ WebDriver driver;
 	@FindBy(xpath="//input[@id='u_0_2']") 
 	WebElement web_facebook_submit;
 	
-	
-	//button[starts-with(@id,'pd_add_cart_btn_')]
-	
 	@FindBy(xpath="//button[@id='u_0_24']") 
 	WebElement Post_to_facebook;
+	
+	@FindBy(xpath="//*[text()='Furqan']") 
+	WebElement facebook_profile;
+	
+	@FindBy(xpath="//a[@class='_52c6']") 
+	WebElement facebook_selfie_share;
+	
+	@FindBy(xpath="//img[@class='shopping_cart_icon']") 
+	WebElement shopping_cart_icon;
+	
+	@FindBy(xpath="//a[text()='View Cart']") 
+	WebElement view_cart;
+	
+	@FindBy(xpath="//button[text()='Checkout']") 
+	WebElement checkout;
+	
+	@FindBy(xpath="//button[@id='continue_button']") 
+	WebElement continue_to_shopping;
+	
+	@FindBy(xpath="//img[@class='myaccount_wrapper_icon profile_picture']") 
+	WebElement profile;
+	
+	@FindBy(xpath="//a[text()='Personal information']") 
+	WebElement Personal_information;
+	
+	@FindBy(xpath="//div[@class='col-md-12 col-sm-12 page_header boder_none']") 
+	WebElement get_personal;
+	
 	
 	
 	public void click_dropdown_toggle() throws Exception
@@ -156,28 +172,6 @@ WebDriver driver;
 	}
 	
 	
-	public void Enter_twitter_email() throws Exception
-	{
-		
-	  Synchronization.sendkey(driver, twitter_email, 30, "qa.auto.sstyler@gmail.com");
-		
-	}
-	
-	public void Enter_twitter_password() throws Exception
-	{
-		
-	  Synchronization.sendkey(driver, twitter_password, 30, "Karachi0!");
-		
-	}
-	
-	public void click_twitter_submit() throws Exception
-	{
-		
-	  Synchronization.Exception_Handling(driver, twitter_submit, 30);	
-		
-	}
-	
-	
 	public void switch_to_other_page() throws Exception
 	{
 		
@@ -210,46 +204,92 @@ WebDriver driver;
 				Synchronization.Exception_Handling(driver, Post_to_facebook, 30);	
 				
 				Thread.sleep(2000);
-				
-				Map<String, Object> prefs = new HashMap<String, Object>();
-	              
-                // Set the notification setting it will override the default setting
-		        prefs.put("profile.default_content_setting_values.notifications", 2);
-  
-                // Create object of ChromeOption class
-		        ChromeOptions options = new ChromeOptions();
- 
-                // Set the experimental option
-		         options.setExperimentalOption("prefs", prefs);
- 
-                // pass the options object in Chrome driver
- 
-		       WebDriver driver = new ChromeDriver(options);
-		       
-		       driver.get("https://www.facebook.com/");
-		       
-		   	   JavascriptExecutor js = (JavascriptExecutor)driver;
-			
-			   js.executeScript("arguments[0].click();", facebook_email);
-		       
-			   facebook_email.sendKeys("qa.auto.sstyler@gmail.com");
-			   
-		     //  Synchronization.sendkey(driver, facebook_email, 30, "qa.auto.sstyler@gmail.com");
-			
-			   Synchronization.sendkey(driver, facebook_password, 30, "Karachi0!");
-			   
-			   Synchronization.Exception_Handling(driver, web_facebook_submit, 30);
-			   
-			   
-				
-			
-						
-				
+  		
 	}
 		
 }
 	}
+	
+	
+	public void switch_to_facebook() throws Exception
+	{
+		driver.get("https://www.facebook.com/");
 
+	   	   JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		   js.executeScript("arguments[0].click();", facebook_email);
+	       
+		 //  facebook_email.sendKeys("qa.auto.sstyler@gmail.com");
+		   
+	      Synchronization.sendkey(driver, facebook_email, 30, "qa.auto.sstyler@gmail.com");
+		
+		  Synchronization.sendkey(driver, facebook_password, 30, "Karachi0!");
+		   
+		  Thread.sleep(4000);
+		   
+		   Synchronization.Exception_Handling(driver, web_facebook_submit, 30);
+		   
+		   Synchronization.Exception_Handling(driver, facebook_profile, 30);
+		   
+		   Thread.sleep(2000);
+		   
+		   Synchronization.Exception_Handling(driver, facebook_selfie_share, 30);
+		   
+		   Thread.sleep(4000);
+	
+	}
+	
+	public void click_shopping_cart() throws Exception
+	{
+		
+	  Synchronization.Exception_Handling(driver, shopping_cart_icon, 30);	
+		
+	}
+	
+	public void click_view_cart() throws Exception
+	{
+		
+	  Synchronization.Exception_Handling(driver, view_cart, 30);	
+		
+	}
+	
+	public void click_checkout() throws Exception
+	{
+		
+	  Synchronization.Exception_Handling(driver, checkout, 30);	
+		
+	}
+	
+	public String continue_shopping()
+	{
+	   String shopping_method = continue_to_shopping.getText();
+	   
+		return shopping_method;
+	}
+	
+	
+	public void click_profile() throws Exception
+	{
+		
+	  Synchronization.Exception_Handling(driver, profile, 30);	
+		
+	}
 
+	public void click_Personal_information() throws Exception
+	{
+		
+	  Synchronization.Exception_Handling(driver, Personal_information, 30);	
+		
+	}
+
+	
+	public String get_personal_information()
+	{
+	   String personal_infomation_text = get_personal.getText();
+	   
+		return personal_infomation_text;
+	}
+	
+	
 	
 }
