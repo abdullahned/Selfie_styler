@@ -38,7 +38,7 @@ public class FindBrokenLink {
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//To Open the Application
-		driver.get("http://www.selfiestyler.com/");
+		driver.get("http://www.selfiestyler.com/login-deactivate");
 		
 	
 	    
@@ -59,7 +59,7 @@ public class FindBrokenLink {
 		
 		Login_obj.login_selfie_styler("test-monika.horvat@selfiestyler.com", "12345678Aa");
 		
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 		
 		Home_obj.Click_Dresses();
 		

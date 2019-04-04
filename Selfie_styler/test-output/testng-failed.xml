@@ -5,7 +5,7 @@
     <classes>
       <class name="Deployment.Testcases.verify_navigation">
         <methods>
-          <include name="Acceptance_criteria_6"/>
+          <include name="Acceptance_criteria_3"/>
           <include name="tearDown"/>
           <include name="endReport"/>
           <include name="setExtent"/>

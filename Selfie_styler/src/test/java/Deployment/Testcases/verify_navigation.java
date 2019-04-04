@@ -15,7 +15,7 @@ import resources.TestBase;
 
 public class verify_navigation extends TestBase {
 	
-	@Test(priority=1, enabled=false)
+	@Test(priority=1, enabled=true)
     public void Acceptance_criteria_1() throws Exception
 	{
 	   extentTest = extent.startTest("Navigation AC#1");
@@ -59,7 +59,7 @@ public class verify_navigation extends TestBase {
 }
 	
 
-	@Test(priority=2, enabled=false)
+	@Test(priority=2, enabled=true)
     public void Acceptance_criteria_2() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#2");
@@ -78,7 +78,7 @@ public class verify_navigation extends TestBase {
 
 	}
 	
-	@Test(priority=3, enabled=false)
+	@Test(priority=3, enabled=true)
     public void Acceptance_criteria_3() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#3");
@@ -109,7 +109,7 @@ public class verify_navigation extends TestBase {
 	}
 	
 	
-	@Test(priority=4, enabled=false)
+	@Test(priority=4, enabled=true)
     public void Acceptance_criteria_4() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#4");
@@ -150,7 +150,7 @@ public class verify_navigation extends TestBase {
 	}
 	
 	
-	@Test(priority=5, enabled=false)
+	@Test(priority=5, enabled=true)
     public void Acceptance_criteria_5() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#5");
@@ -161,7 +161,7 @@ public class verify_navigation extends TestBase {
 	
 	}
 	
-	@Test(priority=6, enabled=false)
+	@Test(priority=6, enabled=true)
     public void Acceptance_criteria_6() throws Exception
 	{
 		extentTest = extent.startTest("Navigation AC#6");
