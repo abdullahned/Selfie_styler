@@ -106,6 +106,8 @@ public class Login {
 		
 		String bottom_Text = bottom_error_para.getText();
 		
+		String abc;
+		
 		return bottom_Text;
 		
 	}
