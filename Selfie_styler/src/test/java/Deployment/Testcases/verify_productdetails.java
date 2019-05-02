@@ -13,7 +13,7 @@ import resources.TestBase;
 
 public class verify_productdetails extends TestBase  {
 	
-	@Test(priority=1, enabled=true)
+	@Test(priority=1, enabled=true, invocationCount=3)
 	public void Acceptance_criteria_1() throws Exception
 	{
         extentTest = extent.startTest("Product Detail AC#1");
@@ -66,7 +66,7 @@ public class verify_productdetails extends TestBase  {
 	    
 	    System.out.println(surefit_message);
 	    
-	    Assert.assertEquals(surefit_message, "Size: Don't worry, we have your", "surefit verified");
+	    Assert.assertEquals(surefit_message, "Size: Don't worry, we have your", "surefit verified"); 
 	    
 		
 		

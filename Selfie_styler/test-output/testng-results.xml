@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="441872" started-at="2019-04-10T16:35:15Z" finished-at="2019-04-10T16:42:37Z">
+  <suite name="Default suite" duration-ms="423057" started-at="2019-05-02T11:39:55Z" finished-at="2019-05-02T11:46:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="441872" started-at="2019-04-10T16:35:15Z" finished-at="2019-04-10T16:42:37Z">
+    <test name="Default test" duration-ms="423057" started-at="2019-05-02T11:39:55Z" finished-at="2019-05-02T11:46:58Z">
       <class name="Utility.FindBrokenLink">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="openBrowser" is-config="true" duration-ms="11918" started-at="2019-04-10T16:35:15Z" finished-at="2019-04-10T16:35:27Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="openBrowser" is-config="true" duration-ms="10474" started-at="2019-05-02T11:39:55Z" finished-at="2019-05-02T11:40:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="getBrokenLinks()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="getBrokenLinks" duration-ms="427641" started-at="2019-04-10T16:35:27Z" finished-at="2019-04-10T16:42:35Z">
+        <test-method status="PASS" signature="getBrokenLinks()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="getBrokenLinks" duration-ms="410259" started-at="2019-05-02T11:40:05Z" finished-at="2019-05-02T11:46:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBrokenLinks -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="tearDown" is-config="true" duration-ms="2270" started-at="2019-04-10T16:42:35Z" finished-at="2019-04-10T16:42:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Utility.FindBrokenLink@91161c7]" name="tearDown" is-config="true" duration-ms="2302" started-at="2019-05-02T11:46:56Z" finished-at="2019-05-02T11:46:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

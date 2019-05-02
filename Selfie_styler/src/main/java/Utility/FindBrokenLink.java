@@ -38,7 +38,7 @@ public class FindBrokenLink {
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//To Open the Application
-		driver.get("https://sstyler-eve.myshopify.com/");
+		driver.get("https://selfiestyler.com/login-deactivate/");
 		
 	
 	    
@@ -53,7 +53,7 @@ public class FindBrokenLink {
 	@Test
 	 public void getBrokenLinks() throws Exception {
 		
-      /* Login Login_obj = new Login(driver);
+       Login Login_obj = new Login(driver);
 		
 		Home Home_obj = new Home(driver);
 		
@@ -67,9 +67,7 @@ public class FindBrokenLink {
 		
 		Home_obj.close_tutorial_popup();
 		
-		Thread.sleep(4000); */
-		
-		
+		Thread.sleep(4000); 
 		
 		 // Find all Elements on the page with 'a' tag
 		 List<WebElement> allLinks = driver.findElements(By.tagName("a"));

@@ -44,7 +44,7 @@ public class Fittingroom_Currentlook {
 	@FindBy(xpath="//span[@id='cartCount']") 
     WebElement cartCount;
 	
-	@FindBy(xpath="//a[starts-with(@id,'9')]") 
+	@FindBy(xpath="//a[starts-with(@id,'950')]") 
 	WebElement hanger;
 	
 	

@@ -55,7 +55,7 @@ public class Verify_Currentlook extends TestBase {
 	}
 	
 
-	@Test(priority=2, enabled=false)
+	@Test(priority=2, enabled=true)
 	public void Acceptance_criteria_2() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#2");
@@ -100,7 +100,7 @@ public class Verify_Currentlook extends TestBase {
 	}
 	
 
-	@Test(priority=3, enabled=false)
+	@Test(priority=3, enabled=true)
 	public void Acceptance_criteria_3() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#3");
@@ -139,7 +139,7 @@ public class Verify_Currentlook extends TestBase {
 	
 	}
 		
-	@Test(priority=4, enabled=false)
+	@Test(priority=4, enabled=true)
 	public void Acceptance_criteria_4() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#4");
@@ -176,7 +176,7 @@ public class Verify_Currentlook extends TestBase {
 		Thread.sleep(5000);	
 	}
 	
-	@Test(priority=5, enabled=false)
+	@Test(priority=5, enabled=true)
 	public void Acceptance_criteria_5() throws Exception
 	{
 		extentTest = extent.startTest("Fitting Room Current Look AC#5");
